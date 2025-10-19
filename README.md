@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ## 💡 Usage
 
-### Real-time Transcription
+### 1. Real-time Transcription
 
 Transcribe speech from your microphone in real-time:
 
@@ -75,7 +75,7 @@ Press `Ctrl+C` to stop transcription.
 ---
 
 
-### Mock Transcription
+### 2. Mock Transcription
 
 Transcribe pre-recorded audio files:
 
@@ -137,6 +137,7 @@ SPEECH_THRESHOLD = 0.01      # Energy level to detect speech (lower = more sensi
 SILENCE_DURATION = 1.5       # Seconds of silence before transcribing
 MIN_SPEECH_DURATION = 0.5    # Minimum speech duration to process (seconds)
 ```
+---
 
 ### Fine-tuning Sensitivity
 
@@ -148,6 +149,7 @@ MIN_SPEECH_DURATION = 0.5    # Minimum speech duration to process (seconds)
 | Cutting off sentences                     | Increase `SILENCE_DURATION` to `2.0` or `2.5`   |
 | Transcribing too quickly                  | Increase `SILENCE_DURATION`                     |
 
+---
 
 ## 🔧 How It Works
 
@@ -165,6 +167,8 @@ MIN_SPEECH_DURATION = 0.5    # Minimum speech duration to process (seconds)
 4. **Silence Detection**: Waits for silence after speech ends
 5. **Transcription**: Processes complete audio using Faster Whisper
 6. **Output**: Displays transcribed text with timestamp
+
+---
 
 ## 🐛 Troubleshooting
 
@@ -186,6 +190,8 @@ MIN_SPEECH_DURATION = 0.5    # Minimum speech duration to process (seconds)
 - ✅ Ensure stable internet connection (first run)
 - ✅ Check available disk space (~500MB needed)
 - ✅ Try deleting `~/.cache/whisper/` and rerunning
+
+---
 
 ## 🎯 Model Options
 
@@ -242,12 +248,16 @@ model = WhisperModel("base.en", device="cpu", compute_type="int8")
 | faster-whisper *(batch_size=8)* | int8          | 5             | 51s      | 3608 MB       |
 ----------------------------------------------------------------------------------------------
 
+---
+
 ## ⚡ Performance Tips
 
 - 🔸 Close heavy applications for better performance
 - 🔸 Use `compute_type="int8"` for faster CPU inference
 - 🔸 Consider `tiny.en` or `base.en` on slower machines
 - 🔸 Ensure microphone is not being used by other apps
+
+---
 
 ## 📁 Project Structure
 
@@ -260,6 +270,8 @@ Transcription---Whisper-Model/
 └── .gitignore                 # Git ignore file
 ```
 
+---
+
 ### Script Comparison
 
 
@@ -270,6 +282,3 @@ Transcription---Whisper-Model/
 | **UI**         | Command-line             | File picker dialog             |
 | **Use Case**   | Live meetings, dictation | Pre-recorded audio, interviews |
 | **Processing** | Continuous streaming     | Single file processing         |
-
-
-
