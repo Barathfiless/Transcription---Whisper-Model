@@ -32,8 +32,7 @@ cd Transcription---Whisper-Model
 ```bash
 pip install -r requirements.txt
 ```
-========================================================================================================================================================================================================================================================================================================================================================================================================================================
-
+---
 
 ## 💡 Usage
 
@@ -74,7 +73,7 @@ The program will:
 Press `Ctrl+C` to stop transcription.
 
 ---
-========================================================================================================================================================================================================================================================================================================================================================================================================================================
+
 
 ### Mock Transcription
 
@@ -127,6 +126,7 @@ Features:
 
 💾 Save transcription to file? (y/n):
 ```
+---
 
 ## ⚙️ Configuration
 
@@ -191,14 +191,14 @@ MIN_SPEECH_DURATION = 0.5    # Minimum speech duration to process (seconds)
 
 The script uses `small.en` model by default. Available models:
 
-|------------|--------|---------|----------|---------------|
+
 | Model      | Size   | Speed   | Accuracy | Use Case      |
 |------------|--------|---------|----------|---------------|
 | `tiny.en`  | ~75MB  | Fastest | Good     | Quick testing |
 | `base.en`  | ~150MB | Fast    | Better   | Balanced      |
 | `small.en` | ~500MB | Medium  | Great    | **Default**   |
 | `medium.en`| ~1.5GB | Slow    | Best     | High accuracy |
-|------------|--------|---------|----------|---------------|
+
 
 Change in code:
 ```python
@@ -270,5 +270,6 @@ Transcription---Whisper-Model/
 | **UI**         | Command-line             | File picker dialog             |
 | **Use Case**   | Live meetings, dictation | Pre-recorded audio, interviews |
 | **Processing** | Continuous streaming     | Single file processing         |
+
 
 
