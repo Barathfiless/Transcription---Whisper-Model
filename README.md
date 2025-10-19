@@ -140,14 +140,13 @@ MIN_SPEECH_DURATION = 0.5    # Minimum speech duration to process (seconds)
 
 ### Fine-tuning Sensitivity
 
-|-------------------------------------------|-------------------------------------------------|
+
 |                Issue                      |                   Solution                      |
 |-------------------------------------------|-------------------------------------------------|
 | Too sensitive (picks up background noise) | Increase `SPEECH_THRESHOLD` to `0.02` or `0.03` |
 | Missing quiet speech                      | Decrease `SPEECH_THRESHOLD` to `0.005`          |
 | Cutting off sentences                     | Increase `SILENCE_DURATION` to `2.0` or `2.5`   |
 | Transcribing too quickly                  | Increase `SILENCE_DURATION`                     |
-|-------------------------------------------|-------------------------------------------------|
 
 
 ## 🔧 How It Works
@@ -263,7 +262,7 @@ Transcription---Whisper-Model/
 
 ### Script Comparison
 
-|----------------|--------------------------|--------------------------------|
+
 | Feature        | realtime-transcribe.py   | mock-transcribe.py             |
 |----------------|--------------------------|--------------------------------|
 | **Input**      | Microphone (live)        | Audio file                     |
@@ -271,4 +270,5 @@ Transcription---Whisper-Model/
 | **UI**         | Command-line             | File picker dialog             |
 | **Use Case**   | Live meetings, dictation | Pre-recorded audio, interviews |
 | **Processing** | Continuous streaming     | Single file processing         |
-|----------------|--------------------------|--------------------------------|
+
+
